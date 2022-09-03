@@ -18,7 +18,7 @@ scale = st.sidebar.slider('文本强度', 5.0, 10.0, 7.5)
 default_prompt = 'a photo of a self-driving car on the street'
 img0 = None
 prompt = st.text_input('请输入提示文本', default_prompt)
-with st.expander("（可选）基于初始图片+文本进行生成，不选则仅适用文本进行生成"):
+with st.expander("（可选）基于初始图片+文本进行生成，不选则仅使用文本进行生成"):
     img0 = st.file_uploader('请上传图片', type=['jpg', 'png', 'jpeg'])
     if img0 is not None:
         st.image(img0, caption='初始图片', use_column_width=True)
@@ -27,7 +27,7 @@ with st.expander("（可选）基于初始图片+文本进行生成，不选则�
 if prompt and not img0:
     if prompt == default_prompt:
         st.text('default image')
-        image = Image.open('pages/assets/default.png')
+        image = Image.open('assets/default.png')
     else:
         st.text('text only')
         r = requests.get(
