@@ -4,7 +4,10 @@ from PIL import Image
 from io import BytesIO
 import glob
 
-SERVER_URL = 'http://stardust-ai.asuscomm.com:9020/inference'
+# SERVER_URL = 'http://stardust-ai.asuscomm.com:9020/inference'
+# SERVER_URL = 'http://stardustai.tpddns.cn:9020/inference'
+# SERVER_URL = 'http://192.168.1.94:9020/inference'
+SERVER_URL = 'http://39.105.9.150:9020/inference'
 
 st.set_page_config(page_title="车道线可视化", page_icon="🛣️", layout="wide",)
 
